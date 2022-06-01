@@ -1,9 +1,9 @@
 package org.foo
 
 class HelloWorld implements Serializable {
-    def steps
-    HelloWorld(steps) {
-        this.steps = steps
+    def script
+    HelloWorld(script) {
+        this.script = script
     }
 
     def hello() {
