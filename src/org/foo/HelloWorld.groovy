@@ -11,9 +11,12 @@ class HelloWorld implements Serializable {
 
         script.echo("Testing multiple calls to script.properties...")
 
-        // script.properties.add(script.buildDiscarder(script.logRotator(numToKeepStr: '5')))
-        println script.properties
-        // script.echo(script.buildDiscarder(script.logRotator(numToKeepStr: '5')))
-        // script.echo(script.properties)
+        addProperty(script.buildDiscarder(script.logRotator(numToKeepStr: '5')))
+    }
+
+    private List properties;
+    def addProperty(property) {
+        this.properties.add(property)
+        script.properties(this.properties)
     }
 }
