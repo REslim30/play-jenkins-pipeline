@@ -16,7 +16,7 @@ class HelloWorld implements Serializable {
 
     private List properties;
     def addProperty(property) {
-        this.properties.add(property)
-        script.properties(this.properties)
+        properties.add(property)
+        script.properties(properties)
     }
 }
