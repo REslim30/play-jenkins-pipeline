@@ -7,6 +7,6 @@ class HelloWorld implements Serializable {
     }
 
     def hello() {
-        script.echo("hello")
+        script.echo("hello from feature/test")
     }
 }
