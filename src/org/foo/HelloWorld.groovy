@@ -14,9 +14,9 @@ class HelloWorld implements Serializable {
         addProperty(script.buildDiscarder(script.logRotator(numToKeepStr: '5')))
     }
 
-    private List foo = [];
+    private List accumulatedProperties = [];
     def addProperty(property) {
-        this.foo.add(property)
-        script.properties(this.foo)
+        this.accumulatedProperties.add(property)
+        script.properties(this.accumulatedProperties)
     }
 }
